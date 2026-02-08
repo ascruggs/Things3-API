@@ -11,9 +11,9 @@ module ThingsScript
       @executed_scripts << script
 
       @responses.each do |pattern, response|
-        if pattern.is_a?(Regexp)
-          return response if script.match?(pattern)
-        elsif script.include?(pattern.to_s)
+        matched = pattern.is_a?(Regexp) ? script.match?(pattern) : script.include?(pattern.to_s)
+        if matched
+          raise response if response.is_a?(Exception)
           return response
         end
       end
