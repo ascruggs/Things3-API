@@ -5,6 +5,7 @@ module Api
         render json: {
           api: "Things 3 API",
           version: "v1",
+          description: "Proxy to Things 3 AppleScript API",
           endpoints: {
             lists: "/api/v1/lists",
             todos: "/api/v1/todos",
