@@ -1,6 +1,17 @@
 # Things 3 API
 
-A Rails 8.1 API-only app that wraps the Things 3 AppleScript API as RESTful JSON endpoints.
+A Rails 8.1 API-only app that wraps the (Things 3 AppleScript API)[https://culturedcode.com/things/support/articles/4562654/]  as RESTful JSON endpoints.
+
+## Why?
+
+This is a generic solution for a specific use case.  To 'safely' run something like openclaw / moltbot / clawdbot you should run it on a Virtual Machine (VM).  If you're using Things, then you also probably want that VM to run MacOS, for access to the messaging app and other apple specific items.  
+
+Unfortunately, you can't log in to the Mac App store on a VM.  Things 3 requires the Mac App store.  So the solution to this problem is to expose an API on your host machine.  
+
+## Disclaimer 
+
+This was 99% agentic coded.  
+This is not secure.  
 
 ## Requirements
 
